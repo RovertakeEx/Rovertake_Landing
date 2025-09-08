@@ -114,3 +114,77 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+html, :host {
+    line-height: 1.5;
+    text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: Inter, system-ui, sans-serif;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+}
+
+body {
+    line-height: inherit;
+    margin: 0px;
+}
+
+.bg-gradient-hero {
+    background-image: var(--gradient-hero);
+}
+
+.bg-gradient-accent {
+    background-image: var(--gradient-accent);
+}
+
+.hover\:text-accent:hover {
+    color: hsl(var(--accent));
+}
+
+.text-foreground {
+    color: hsl(var(--foreground));
+}
+
+.bg-background\/95 {
+    background-color: hsl(var(--background) / .95);
+}
+
+.border-border {
+    border-color: hsl(var(--border));
+}
+
+.hover\:text-accent-foreground:hover {
+    color: hsl(var(--accent-foreground));
+}
+
+.hover\:bg-accent:hover {
+    background-color: hsl(var(--accent));
+}
+
+.bg-brand-pink {
+    background-color: hsl(var(--brand-pink));
+}
+
+.bg-accent {
+    background-color: hsl(var(--accent));
+}
+
+.bg-navy-light {
+    background-color: hsl(var(--navy-light));
+}
+
+.gradient-text-accent {
+  background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--brand-pink-light)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-accent {
+    color: hsl(var(--accent));
+}
