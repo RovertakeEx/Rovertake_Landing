@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import navLinks from "../data/navLinks";
+import logoFull from "../assets/img/rovertake-logo-full.png";
+import logoFullWhite from "../assets/img/rovertake-logo-full-white.png";
+// import logo from "../assets/img/rovertake-logo.png";
+// import logoWhite from "../assets/img/rovertake-logo-white.png";
 
 const Header = () => {
 
@@ -28,23 +32,24 @@ const Header = () => {
           : "bg-transparent"
       }`}>
         <nav className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-5">
             <div className="flex items-center">
-              <h3 className={`${isScrolled ? "text-foreground" : "text-gray-300"} text-2xl font-bold`}>Rovertake</h3>
+              {/* <h3 className={`${isScrolled ? "text-foreground" : "text-gray-300"} text-2xl font-bold`}>Rovertake</h3> */}
+              <img src={isScrolled ? logoFull : logoFullWhite} alt="Rovertake Logo" className="w-[80px] sm:w-[90px] md:w-[100px]"/>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (                
                 <a 
                 key={link.name}
                 onClick={() => scrollToSection(link.href)} 
-                className={`${isScrolled ? "text-foreground" : "text-gray-300"} hover:text-accent transition-colors duration-300 font-medium`}>
+                className={`${isScrolled ? "text-foreground" : "text-gray-300"} hover:text-accent transition-colors cursor-pointer duration-300 font-medium`}>
                   {link.name}
                 </a>
               ))}
-              <button className="inline-flex items-center justify-center cursor-pointer gap-2 whitespace-nowrap text-sm [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-accent text-white hover:shadow-pink hover:scale-105 transform transition-all duration-300 font-semibold h-11 rounded-lg px-8">Start a Project</button>
+              <button className="inline-flex items-center justify-center cursor-pointer gap-2 whitespace-nowrap text-sm [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-accent text-white hover:shadow-pink hover:scale-105 transform transition-all duration-300 font-semibold h-11 rounded-lg px-8" onClick={() => scrollToSection("#contact")}>Start a Project</button>
             </div>
             <div className="md:hidden">
-              <button className={`${isScrolled ? "text-foreground" : "text-gray-300"} inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10`}
+              <button className={`${isScrolled ? "text-foreground" : "text-gray-300"} cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -58,11 +63,11 @@ const Header = () => {
                   <a 
                   key={link.name}
                   onClick={() => scrollToSection(link.href)} 
-                  className={`${isScrolled ? "text-foreground" : "text-gray-300"} hover:text-accent transition-colors duration-300 font-medium`}>
+                  className={`${isScrolled ? "text-foreground" : "text-gray-300"} hover:text-accent transition-colors cursor-pointer duration-300 font-medium`}>
                     {link.name}
                   </a>
                 ))}
-                <button className="inline-flex items-center justify-center cursor-pointer gap-2 whitespace-nowrap text-sm [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-accent text-white hover:shadow-pink hover:scale-105 transform transition-all duration-300 font-semibold h-11 rounded-lg px-8">Start a Project</button>
+                <button className="inline-flex items-center justify-center cursor-pointer gap-2 whitespace-nowrap text-sm [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-accent text-white hover:shadow-pink hover:scale-105 transform transition-all duration-300 font-semibold h-11 rounded-lg px-8" onClick={() => scrollToSection("#contact")}>Start a Project</button>
             </div>
           </div>
         )}

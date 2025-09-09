@@ -40,17 +40,17 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up">
-            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-accent text-white hover:shadow-pink hover:scale-105 transform transition-all duration-300 font-semibold h-14 rounded-xl px-10 text-lg group">
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-accent text-white hover:shadow-pink hover:scale-105 transform transition-all duration-300 font-semibold h-14 rounded-xl px-10 text-lg group" onClick={() => scrollToSection("#contact")}>
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all duration-300 cursor-pointer [&_svg]:size-4 [&_svg]:shrink-0 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm h-14 rounded-xl px-10 text-lg">
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all duration-300 cursor-pointer [&_svg]:size-4 [&_svg]:shrink-0 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm h-14 rounded-xl px-10 text-lg" onClick={() => scrollToSection("#services")}>
               See What We Do
             </button>
           </div>
 
           {/* Value Props */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-3xl mx-auto animate-fade-in-up">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-15 max-w-3xl mx-auto animate-fade-in-up">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">100%</div>
               <div className="text-gray-400 text-sm">Commitment to Quality</div>
