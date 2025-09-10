@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import navLinks from "../data/navLinks";
 import logoFull from "../assets/img/rovertake-logo-full.png";
 import logoFullWhite from "../assets/img/rovertake-logo-full-white.png";
-import logoBg from '../assets/img/rovertake-logo-bg.png'
+import logoBg from '../assets/img/rovertake-logo-bg-white.png'
 // import logo from "../assets/img/rovertake-logo.png";
 // import logoWhite from "../assets/img/rovertake-logo-white.png";
 
