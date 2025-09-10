@@ -1,7 +1,8 @@
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Services from "../components/Services";
-import Portfolio from "../components/Portfolio";
+//import Portfolio from "../components/Portfolio";
+import WhyChoose from '../components/WhyChoose';
 import Contact from "../components/Contact";
 
 const Index = () => {
@@ -10,7 +11,8 @@ const Index = () => {
       <Hero />
       <Services />
       <About />
-      <Portfolio/>
+      {/* <Portfolio/> */}
+      <WhyChoose />
       <Contact />
     </div>
   )

@@ -3,6 +3,11 @@ import { ArrowRight } from "lucide-react";
 
 const Services = () => {
 
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section id="services" className="py-24 bg-gradient-subtle">
       <div className="container mx-auto px-6">
@@ -37,7 +42,7 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 cursor-pointer [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent h-10 px-4 py-2 group/btn text-accent hover:!text-white">
+                <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent h-10 px-4 py-2 group/btn text-accent hover:!text-white"  onClick={() => scrollToSection("#contact")}>
                   Learn More <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>

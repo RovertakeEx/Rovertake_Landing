@@ -2,8 +2,7 @@ import {
   Zap, 
   Code, 
   TrendingUp, 
-  Palette, 
-  ArrowRight 
+  Palette
 } from "lucide-react";
 
 const services = [

@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import navLinks from "../data/navLinks";
 import logoFull from "../assets/img/rovertake-logo-full.png";
 import logoFullWhite from "../assets/img/rovertake-logo-full-white.png";
+import logoBg from '../assets/img/rovertake-logo-bg.png'
 // import logo from "../assets/img/rovertake-logo.png";
 // import logoWhite from "../assets/img/rovertake-logo-white.png";
 
@@ -35,7 +36,8 @@ const Header = () => {
           <div className="flex items-center justify-between gap-5">
             <div className="flex items-center">
               {/* <h3 className={`${isScrolled ? "text-foreground" : "text-gray-300"} text-2xl font-bold`}>Rovertake</h3> */}
-              <img src={isScrolled ? logoFull : logoFullWhite} alt="Rovertake Logo" className="w-[80px] sm:w-[90px] md:w-[100px]"/>
+              <img onClick={() => scrollToSection("#home")} src={isScrolled ? logoFull : logoFullWhite} alt="Rovertake Logo" className="w-[80px] sm:w-[90px] md:w-[100px] cursor-pointer"/>
+              <img src={logoBg} alt="Rovertake Logo" className="hidden"/>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (                
@@ -49,7 +51,7 @@ const Header = () => {
               <button className="inline-flex items-center justify-center cursor-pointer gap-2 whitespace-nowrap text-sm [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-accent text-white hover:shadow-pink hover:scale-105 transform transition-all duration-300 font-semibold h-11 rounded-lg px-8" onClick={() => scrollToSection("#contact")}>Start a Project</button>
             </div>
             <div className="md:hidden">
-              <button className={`${isScrolled ? "text-foreground" : "text-gray-300"} cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10`}
+              <button className={`${isScrolled ? "text-foreground" : "text-gray-300"} cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-300 [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
