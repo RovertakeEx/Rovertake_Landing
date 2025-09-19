@@ -51,7 +51,7 @@ const Contact = () => {
     // Format message
     const message = `
     New Inquiry
-    -----------------------
+    
     Name: ${formData.firstName} ${formData.lastName}
     Email: ${formData.email}
     Phone: ${formData.phoneno}
@@ -224,10 +224,10 @@ const Contact = () => {
               <div className="p-6">
                 <h4 className="text-lg font-semibold mb-2">Meet Our Founder</h4>
                 <p className="text-gray-300 mb-4">
-                  Connect directly with Rifnaz, our CEO and founder, to discuss your vision and explore partnership opportunities.
+                  Connect directly with Rifnaz, our Founder and CEO, to discuss your vision and explore partnership opportunities.
                 </p>
-                <a className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 [&_svg]:size-4 [&_svg]:shrink-0 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm h-9 rounded-lg px-3" href="https://www.rifnaz.com" target="_blank" rel="noopener noreferrer">
-                    Visit rifnaz.com
+                <a className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 [&_svg]:size-4 [&_svg]:shrink-0 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm h-9 rounded-lg px-3" href="https://mail.google.com/mail/?view=cm&to=rifnaz@rovertake.com" target="_blank" rel="noopener noreferrer" title="rifnaz@rovertake.com">
+                    Book an Appointment
                   </a>
               </div>
             </div>
