@@ -1,0 +1,11 @@
+/* 
+  # Cache HTML pages for 0 seconds (always fresh)
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  # Cache all static assets (JS, CSS, images) for 1 year and mark immutable
+  Cache-Control: public, max-age=31536000, immutable
+
+/index.html
+  # Ensure HTML itself is always fresh
+  Cache-Control: public, max-age=0, must-revalidate
