@@ -52,14 +52,14 @@ const Header = () => {
             </div>
             <div className="md:hidden">
               <button className={`${isScrolled ? "text-foreground" : "text-gray-300"} cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-300 [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10`}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
             </div>
           </div>
           {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
+          <div className={`md:hidden mt-4 pb-4 border-t border-border pt-4 ${isScrolled ? "bg-transparent" : "bg-gradient-hero"}`}>
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (                
                   <a 
